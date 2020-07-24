@@ -4,7 +4,6 @@ import java.io.FileOutputStream;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RestController
 public class ImageController {
 
-	@PostMapping(path = "/images", produces = MediaType.MULTIPART_FORM_DATA_VALUE)
+	@PostMapping(path = "/images")
 	public void upload(@RequestParam("image") MultipartFile image) {
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH-mm-ss-SSS");

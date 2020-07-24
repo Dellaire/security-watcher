@@ -6,5 +6,5 @@ This project contains a client and a server component, which serve as a security
 
 When navigating to the root of the project, the upload can be tested by calling:
 ```
-curl -X POST -H "Content-Type: multipart/form-data" -F "image=@src/test/resources/test.jpeg" http://localhost:8080/images
+curl -X POST -F "image=@src/test/resources/test.jpeg" http://localhost:8080/images
 ```
